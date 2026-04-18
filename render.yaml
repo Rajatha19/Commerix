@@ -1,0 +1,12 @@
+# Render Blueprint for GoCart Next.js app
+# Deploy as a Web Service (Node server), not Static Site, so / and all routes work.
+
+services:
+  - type: web
+    name: gocart
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
